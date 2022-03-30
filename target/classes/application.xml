@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="source" class="cn.tedu.Source">
+    <property name="fruit" value="橙汁"></property>
+    <property name="size" value="中杯"></property>
+    <property name="sugar" value="半塘"></property>
+</bean>
+    <bean id="juicemaker" class="cn.tedu.JuiceMaker">
+        <property name="source" ref="source"></property>
+    </bean>
+</beans>
